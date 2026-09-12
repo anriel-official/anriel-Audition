@@ -488,12 +488,14 @@ main {
 
 
 
+/* ========================================
+   HERO TITLE
+======================================== */
+
 .hero-title {
   margin: 0;
 
-  display: flex;
-
-  flex-direction: column;
+  width: 100%;
 
   font-family:
     "Arial Black",
@@ -503,42 +505,117 @@ main {
     sans-serif;
 
   font-size:
-    clamp(50px, 7.5vw, 120px);
+    clamp(34px, 5.6vw, 92px);
 
   font-weight: 900;
 
-  letter-spacing: -0.06em;
+  letter-spacing: -0.055em;
 
-  line-height: 0.95;
-}
+  line-height: 1.05;
 
+  text-align: center;
 
-.hero-title-indent {
-  margin-left:
-    clamp(0px, 5vw, 90px);
+  white-space: nowrap;
 }
 
 
 .hero-bottom {
   width: 100%;
 
-  margin-top:
-    clamp(35px, 5vw, 65px);
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 .hero-description {
   margin: 0;
 
-  max-width: 570px;
+  width: 100%;
+
+  max-width: 700px;
 
   color: #333333;
 
-  font-size: 14px;
+  font-size: 20px;
 
   font-weight: 600;
 
   line-height: 1.9;
+
+  text-align: center;
+
+  white-space: pre-line;
+}
+
+
+
+/* ========================================
+   HERO ENTRY
+======================================== */
+
+.hero-entry-wrap {
+  width: 100%;
+
+  max-width: 900px;
+
+  margin-top: 32px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+.hero-entry-button {
+  width: 100%;
+
+  min-height: 90px;
+
+  padding:
+    20px
+    clamp(22px, 4vw, 46px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 24px;
+
+  border:
+    2px solid #171717;
+
+  background:
+    rgba(255, 255, 255, 0.62);
+
+  font-size:
+    clamp(15px, 1.6vw, 20px);
+
+  font-weight: 900;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.hero-entry-button:hover {
+  background: #171717;
+
+  color: #ffffff;
+}
+
+
+.hero-entry-wrap .external-note {
+  align-self: flex-start;
+
+  margin-top: 8px;
 }
 
 
@@ -758,7 +835,7 @@ main {
 
 
 /* ========================================
-   TYPE 16:9 IMAGE
+   TYPE IMAGE
 ======================================== */
 
 .type-visual-wrap {
@@ -944,6 +1021,56 @@ main {
 
 
 /* ========================================
+   PROJECT NOTE
+======================================== */
+
+.project-note {
+  width: 100%;
+
+  margin-top: 55px;
+
+  padding:
+    clamp(34px, 5vw, 55px);
+
+  border:
+    2px solid rgba(23, 23, 23, 0.5);
+
+  background:
+    rgba(255, 255, 255, 0.58);
+}
+
+
+.project-note-title {
+  margin:
+    0 0 18px !important;
+
+  color: #171717 !important;
+
+  font-size:
+    clamp(24px, 2.7vw, 38px) !important;
+
+  font-weight: 900 !important;
+
+  line-height: 1.4 !important;
+}
+
+
+.project-note-text {
+  margin: 0 !important;
+
+  color: #2b2b2b !important;
+
+  font-size:
+    clamp(17px, 1.7vw, 22px) !important;
+
+  font-weight: 700 !important;
+
+  line-height: 2 !important;
+}
+
+
+
+/* ========================================
    PERIOD
 ======================================== */
 
@@ -1025,6 +1152,64 @@ main {
   font-weight: 800;
 
   white-space: nowrap;
+}
+
+
+
+/* ========================================
+   PERIOD ENTRY
+======================================== */
+
+.period-entry-wrap {
+  width: 100%;
+
+  margin-top: 38px;
+}
+
+
+.period-entry-button {
+  width: 100%;
+
+  min-height: 90px;
+
+  padding:
+    20px
+    clamp(22px, 4vw, 46px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 24px;
+
+  border:
+    2px solid #171717;
+
+  background:
+    rgba(255, 255, 255, 0.62);
+
+  font-size:
+    clamp(15px, 1.6vw, 20px);
+
+  font-weight: 900;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.period-entry-button:hover {
+  background: #171717;
+
+  color: #ffffff;
+}
+
+
+.period-entry-wrap .external-note {
+  margin-top: 8px;
 }
 
 
@@ -1766,7 +1951,7 @@ main {
 
 
 /* ========================================
-   ENTRY 16:9 IMAGE
+   ENTRY IMAGE
 ======================================== */
 
 .entry-visual {
@@ -2002,6 +2187,12 @@ summary:focus-visible {
     max-height: 65px;
   }
 
+
+  .hero-title {
+    font-size:
+      clamp(32px, 5.2vw, 70px);
+  }
+
 }
 
 
@@ -2079,12 +2270,17 @@ summary:focus-visible {
 
   .hero-title {
     font-size:
-      clamp(48px, 12vw, 90px);
+      clamp(30px, 7vw, 58px);
   }
 
 
-  .hero-title-indent {
-    margin-left: 0;
+  .hero-entry-wrap {
+    max-width: 100%;
+  }
+
+
+  .hero-entry-button {
+    width: 100%;
   }
 
 
@@ -2310,10 +2506,14 @@ summary:focus-visible {
 
 
   .hero-title {
-    font-size:
-      clamp(42px, 14vw, 68px);
+    width: 100%;
 
-    line-height: 1;
+    font-size:
+      clamp(22px, 7.5vw, 40px);
+
+    letter-spacing: -0.05em;
+
+    white-space: nowrap;
   }
 
 
@@ -2323,7 +2523,44 @@ summary:focus-visible {
 
 
   .hero-description {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding:
+      0 5px;
+
     font-size: 13px;
+
+    text-align: center;
+  }
+
+
+  .hero-entry-wrap {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin-top: 26px;
+  }
+
+
+  .hero-entry-button {
+    width: 100%;
+
+    min-height: 72px;
+
+    padding:
+      16px 18px;
+
+    font-size: 13px;
+  }
+
+
+  .hero-entry-wrap .external-note {
+    width: 100%;
+
+    text-align: left;
   }
 
 
@@ -2423,6 +2660,30 @@ summary:focus-visible {
   }
 
 
+  .project-note {
+    margin-top: 42px;
+
+    padding:
+      28px 22px;
+  }
+
+
+  .project-note-title {
+    font-size:
+      clamp(22px, 7vw, 30px) !important;
+
+    line-height: 1.35 !important;
+  }
+
+
+  .project-note-text {
+    font-size:
+      clamp(16px, 4.5vw, 19px) !important;
+
+    line-height: 1.9 !important;
+  }
+
+
 
   /* PERIOD */
 
@@ -2449,6 +2710,16 @@ summary:focus-visible {
 
   .period-time {
     margin: 0;
+  }
+
+
+  .period-entry-button {
+    min-height: 72px;
+
+    padding:
+      16px 18px;
+
+    font-size: 13px;
   }
 
 
