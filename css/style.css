@@ -59,6 +59,7 @@ button {
 }
 
 
+
 /* ========================================
    FIXED BACKGROUND
 ======================================== */
@@ -87,6 +88,7 @@ main {
   position: relative;
   z-index: 1;
 }
+
 
 
 /* ========================================
@@ -132,6 +134,7 @@ main {
 }
 
 
+
 /* ========================================
    LOGO
 ======================================== */
@@ -158,6 +161,7 @@ main {
 
   object-fit: contain;
 }
+
 
 
 /* ========================================
@@ -212,6 +216,7 @@ main {
 }
 
 
+
 /* ========================================
    HEADER ENTRY
 ======================================== */
@@ -250,6 +255,7 @@ main {
   background: #171717;
   color: #ffffff;
 }
+
 
 
 /* ========================================
@@ -335,6 +341,7 @@ main {
 }
 
 
+
 /* ========================================
    HERO
 ======================================== */
@@ -390,6 +397,7 @@ main {
 }
 
 
+
 /* ========================================
    HERO IMAGE
 ======================================== */
@@ -417,6 +425,7 @@ main {
   object-fit: cover;
   object-position: center center;
 }
+
 
 
 /* ========================================
@@ -483,6 +492,7 @@ main {
 }
 
 
+
 /* ========================================
    HERO ENTRY
 ======================================== */
@@ -513,14 +523,14 @@ main {
   display: flex;
 
   align-items: center;
-  justify-content: space-between;
-
-  gap: 24px;
+  justify-content: center;
 
   border: 2px solid #171717;
 
   background:
     rgba(255, 255, 255, 0.68);
+
+  text-align: center;
 
   font-size:
     clamp(18px, 1.8vw, 24px);
@@ -542,6 +552,7 @@ main {
 
   margin-top: 9px;
 }
+
 
 
 /* ========================================
@@ -581,6 +592,10 @@ main {
   margin-bottom: 90px;
 }
 
+.centered-heading {
+  text-align: center;
+}
+
 .section-label {
   margin: 0 0 18px;
 
@@ -615,26 +630,33 @@ main {
 }
 
 
+
 /* ========================================
    ABOUT
 ======================================== */
 
 .about-layout {
-  display: grid;
+  width: 100%;
 
-  grid-template-columns:
-    0.65fr
-    1.2fr;
+  display: flex;
 
-  gap: 70px;
+  justify-content: center;
 }
 
 .about-copy {
-  max-width: 760px;
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  text-align: center;
 }
 
 .about-copy p {
-  margin: 0 0 34px;
+  margin:
+    0 auto
+    36px;
 
   font-size:
     clamp(20px, 1.8vw, 26px);
@@ -643,6 +665,11 @@ main {
 
   line-height: 2;
 }
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
 
 
 /* ========================================
@@ -732,6 +759,7 @@ main {
 }
 
 
+
 /* ========================================
    TYPE IMAGE
 ======================================== */
@@ -770,6 +798,7 @@ main {
 }
 
 
+
 /* ========================================
    MESSAGE
 ======================================== */
@@ -787,6 +816,8 @@ main {
     rgba(23, 23, 23, 0.9);
 
   color: #ffffff;
+
+  text-align: center;
 
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -814,10 +845,14 @@ main {
     clamp(26px, 3vw, 48px);
 
   font-weight: 900;
+
+  text-align: center;
 }
 
 .message-text {
   padding-top: 65px;
+
+  text-align: center;
 }
 
 .message-text p {
@@ -835,6 +870,8 @@ main {
   font-weight: 900;
 
   line-height: 1.2;
+
+  text-align: center;
 }
 
 .message-text strong {
@@ -842,6 +879,7 @@ main {
 
   font-weight: 900;
 }
+
 
 
 /* ========================================
@@ -899,6 +937,7 @@ main {
 }
 
 
+
 /* ========================================
    PROJECT NOTE
 ======================================== */
@@ -945,9 +984,14 @@ main {
 }
 
 
+
 /* ========================================
    PERIOD
 ======================================== */
+
+.period-content {
+  text-align: center;
+}
 
 .period-block {
   padding: 60px 0;
@@ -957,6 +1001,8 @@ main {
 
   border-bottom:
     1px solid rgba(23, 23, 23, 0.22);
+
+  text-align: center;
 }
 
 .period-year {
@@ -968,16 +1014,19 @@ main {
   font-weight: 900;
 
   letter-spacing: 0.15em;
+
+  text-align: center;
 }
 
 .period-date-row {
   display: flex;
 
-  align-items: flex-end;
+  flex-direction: column;
 
-  gap: 28px;
+  align-items: center;
+  justify-content: center;
 
-  flex-wrap: wrap;
+  gap: 22px;
 }
 
 .period-date {
@@ -996,6 +1045,8 @@ main {
   line-height: 1;
 
   letter-spacing: -0.04em;
+
+  text-align: center;
 }
 
 .period-date span {
@@ -1007,17 +1058,20 @@ main {
 }
 
 .period-time {
-  margin: 0 0 8px;
+  margin: 0;
 
   color: #292929;
 
   font-size:
-    clamp(17px, 1.5vw, 21px);
+    clamp(18px, 1.8vw, 24px);
 
   font-weight: 900;
 
+  text-align: center;
+
   white-space: nowrap;
 }
+
 
 
 /* ========================================
@@ -1028,6 +1082,12 @@ main {
   width: 100%;
 
   margin-top: 38px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
 }
 
 .period-entry-button {
@@ -1042,14 +1102,14 @@ main {
   display: flex;
 
   align-items: center;
-  justify-content: space-between;
-
-  gap: 24px;
+  justify-content: center;
 
   border: 2px solid #171717;
 
   background:
     rgba(255, 255, 255, 0.68);
+
+  text-align: center;
 
   font-size:
     clamp(18px, 1.8vw, 24px);
@@ -1069,7 +1129,10 @@ main {
 
 .period-entry-wrap .external-note {
   margin-top: 9px;
+
+  align-self: flex-start;
 }
+
 
 
 /* ========================================
@@ -1146,6 +1209,7 @@ main {
 }
 
 
+
 /* ========================================
    NOTICE
 ======================================== */
@@ -1172,6 +1236,7 @@ main {
 
   line-height: 1.8;
 }
+
 
 
 /* ========================================
@@ -1300,6 +1365,7 @@ main {
 }
 
 
+
 /* ========================================
    FAQ
 ======================================== */
@@ -1396,6 +1462,7 @@ main {
 }
 
 
+
 /* ========================================
    QUESTION
 ======================================== */
@@ -1479,14 +1546,14 @@ main {
   display: flex;
 
   align-items: center;
-  justify-content: space-between;
-
-  gap: 40px;
+  justify-content: center;
 
   border: 2px solid #171717;
 
   background:
     rgba(255, 255, 255, 0.45);
+
+  text-align: center;
 
   font-size: 17px;
   font-weight: 900;
@@ -1501,6 +1568,7 @@ main {
 
   color: #ffffff;
 }
+
 
 
 /* ========================================
@@ -1535,9 +1603,11 @@ main {
 .entry-content {
   width: 100%;
 
-  max-width: 1100px;
+  max-width: 1350px;
 
   margin: 0 auto;
+
+  text-align: center;
 }
 
 .entry-label {
@@ -1551,10 +1621,14 @@ main {
   letter-spacing: 0.15em;
 
   text-transform: uppercase;
+
+  text-align: center;
 }
 
 .entry-content h2 {
   margin: 0;
+
+  width: 100%;
 
   font-family:
     "Arial Black",
@@ -1563,36 +1637,49 @@ main {
     sans-serif;
 
   font-size:
-    clamp(60px, 9vw, 140px);
+    clamp(42px, 6vw, 90px);
 
   font-weight: 900;
 
-  letter-spacing: -0.06em;
+  letter-spacing: -0.055em;
 
-  line-height: 0.95;
+  line-height: 1.05;
+
+  text-align: center;
+
+  white-space: nowrap;
 }
 
 .entry-description {
-  max-width: 650px;
+  width: 100%;
+
+  max-width: none;
 
   margin:
-    50px
-    0
+    38px
+    auto
     45px;
 
   color: #292929;
 
   font-size:
-    clamp(18px, 1.6vw, 22px);
+    clamp(18px, 1.7vw, 23px);
 
   font-weight: 700;
 
   line-height: 1.9;
+
+  text-align: center;
+
+  white-space: nowrap;
 }
 
 .entry-link-group {
   width: 100%;
+
+  align-items: center;
 }
+
 
 
 /* ========================================
@@ -1612,10 +1699,8 @@ main {
 
   display: flex;
 
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-
-  gap: 30px;
 
   border: 3px solid #171717;
 
@@ -1623,6 +1708,8 @@ main {
     rgba(255, 255, 255, 0.68);
 
   overflow: hidden;
+
+  text-align: center;
 
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -1654,24 +1741,23 @@ main {
     translateY(0);
 }
 
-.entry-button-text,
-.entry-button-arrow {
+.entry-button-text {
   position: relative;
 
   z-index: 2;
-}
 
-.entry-button-text {
   display: flex;
 
   flex-direction: column;
 
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 
   gap: 7px;
 
   min-height: 70px;
+
+  text-align: center;
 }
 
 .entry-button-small {
@@ -1683,6 +1769,8 @@ main {
   font-weight: 900;
 
   letter-spacing: 0.14em;
+
+  text-align: center;
 
   transition: color 0.3s ease;
 }
@@ -1702,24 +1790,10 @@ main {
     clamp(31px, 3.5vw, 50px);
 
   font-weight: 900;
+
+  text-align: center;
 }
 
-.entry-button-arrow {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  flex: 0 0 auto;
-
-  width: 65px;
-  height: 65px;
-
-  font-size:
-    clamp(38px, 4vw, 60px);
-
-  font-weight: 900;
-}
 
 
 /* ========================================
@@ -1760,7 +1834,10 @@ main {
   font-weight: 800;
 
   letter-spacing: 0.04em;
+
+  text-align: center;
 }
+
 
 
 /* ========================================
@@ -1840,6 +1917,7 @@ main {
 }
 
 
+
 /* ========================================
    REVEAL
 ======================================== */
@@ -1863,6 +1941,7 @@ main {
 }
 
 
+
 /* ========================================
    FOCUS
 ======================================== */
@@ -1874,6 +1953,7 @@ summary:focus-visible {
 
   outline-offset: 5px;
 }
+
 
 
 /* ========================================
@@ -1906,6 +1986,7 @@ summary:focus-visible {
   }
 
 }
+
 
 
 /* ========================================
@@ -1941,7 +2022,18 @@ summary:focus-visible {
       clamp(32px, 5.2vw, 70px);
   }
 
+  .entry-content h2 {
+    font-size:
+      clamp(38px, 5vw, 68px);
+  }
+
+  .entry-description {
+    font-size:
+      clamp(16px, 1.5vw, 20px);
+  }
+
 }
+
 
 
 /* ========================================
@@ -2046,16 +2138,8 @@ summary:focus-visible {
 
   /* ABOUT */
 
-  .about-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .about-spacer {
-    display: none;
-  }
-
   .about-copy {
-    max-width: 800px;
+    max-width: 820px;
   }
 
 
@@ -2143,6 +2227,20 @@ summary:focus-visible {
     max-width: none;
   }
 
+  .entry-content h2 {
+    font-size:
+      clamp(34px, 6vw, 58px);
+
+    white-space: nowrap;
+  }
+
+  .entry-description {
+    font-size:
+      clamp(15px, 2vw, 19px);
+
+    white-space: nowrap;
+  }
+
   .entry-button {
     min-height: 150px;
   }
@@ -2163,6 +2261,7 @@ summary:focus-visible {
   }
 
 }
+
 
 
 /* ========================================
@@ -2303,7 +2402,7 @@ summary:focus-visible {
 
   .section-heading h2 {
     font-size:
-      clamp(38px, 12vw, 55px);
+      clamp(34px, 10vw, 52px);
   }
 
 
@@ -2367,9 +2466,14 @@ summary:focus-visible {
       20px;
   }
 
+  .message-line p {
+    font-size:
+      clamp(24px, 8vw, 35px);
+  }
+
   .message-text p {
     font-size:
-      clamp(32px, 10vw, 50px);
+      clamp(30px, 9vw, 46px);
   }
 
 
@@ -2418,16 +2522,18 @@ summary:focus-visible {
   /* PERIOD */
 
   .period-date-row {
-    align-items: flex-start;
+    align-items: center;
 
     flex-direction: column;
 
-    gap: 12px;
+    gap: 16px;
   }
 
   .period-date {
     font-size:
       clamp(42px, 13vw, 70px);
+
+    white-space: nowrap;
   }
 
   .period-date span {
@@ -2568,16 +2674,27 @@ summary:focus-visible {
 
   .entry-content h2 {
     font-size:
-      clamp(55px, 17vw, 85px);
+      clamp(24px, 7.2vw, 38px);
+
+    letter-spacing: -0.04em;
+
+    white-space: nowrap;
   }
 
   .entry-description {
+    width: 100%;
+
     margin:
-      38px
-      0
+      28px
+      auto
       35px;
 
-    font-size: 18px;
+    font-size:
+      clamp(11px, 3.2vw, 15px);
+
+    line-height: 1.6;
+
+    white-space: nowrap;
   }
 
   .entry-button {
@@ -2586,14 +2703,14 @@ summary:focus-visible {
     padding:
       24px
       20px;
-
-    gap: 15px;
   }
 
   .entry-button-text {
     gap: 5px;
 
     min-height: 60px;
+
+    align-items: center;
   }
 
   .entry-button-main {
@@ -2604,13 +2721,6 @@ summary:focus-visible {
 
   .entry-button-small {
     font-size: 10px;
-  }
-
-  .entry-button-arrow {
-    width: 44px;
-    height: 44px;
-
-    font-size: 34px;
   }
 
   .entry-visual {
