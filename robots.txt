@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anriel-official.github.io/anriel-Audition/sitemap.xml
