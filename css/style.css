@@ -2987,3 +2987,197 @@ summary:focus-visible {
   }
 
 }
+
+/* =========================================
+   YOUTUBE
+========================================= */
+
+.youtube-section {
+  position: relative;
+}
+
+.youtube-description {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 2;
+  font-weight: 600;
+}
+
+
+/* Shorts 2本 */
+
+.youtube-shorts {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+
+/* 1本ごとのカード */
+
+.youtube-short-card {
+  width: 100%;
+  max-width: 330px;
+}
+
+
+/* 9:16 */
+
+.youtube-short-frame {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 9 / 16;
+
+  overflow: hidden;
+
+  background: #000;
+
+  border-radius: 4px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* YouTube iframe */
+
+.youtube-short-frame iframe {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+
+/* チャンネルボタン */
+
+.youtube-channel-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 55px;
+}
+
+
+.youtube-channel-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 280px;
+
+  padding: 18px 34px;
+
+  border: 1px solid #111;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  color: #111;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.youtube-channel-button:hover {
+  background: #111;
+  color: #fff;
+
+  transform: translateY(-2px);
+}
+
+
+.youtube-channel-wrap .external-note {
+  margin-top: 9px;
+}
+
+
+/* =========================================
+   YOUTUBE - SMARTPHONE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .youtube-description {
+    margin-bottom: 32px;
+
+    padding: 0 10px;
+
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+
+  .youtube-shorts {
+    gap: 12px;
+
+    padding: 0;
+  }
+
+
+  .youtube-short-card {
+    width: calc(50% - 6px);
+    max-width: none;
+  }
+
+
+  .youtube-short-frame {
+    width: 100%;
+  }
+
+
+  .youtube-channel-wrap {
+    margin-top: 36px;
+  }
+
+
+  .youtube-channel-button {
+    width: 100%;
+    min-width: 0;
+
+    padding: 16px 20px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL SCREEN
+========================================= */
+
+@media (max-width: 380px) {
+
+  .youtube-shorts {
+    gap: 8px;
+  }
+
+
+  .youtube-short-card {
+    width: calc(50% - 4px);
+  }
+
+}
